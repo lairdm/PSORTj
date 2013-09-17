@@ -9,7 +9,6 @@ package org.psort.psortj.svmloc;
  */
 public class svmjni {
     public svmjni () {
-        System.loadLibrary("svmloc");
     }
 
     public static int getVal (int x) {

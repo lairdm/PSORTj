@@ -20,7 +20,7 @@
             <version>1.2.1</version>
             <executions>
                 <execution>
-                    <id>org.psort.psortj.libsvm.Native</id>
+                    <id>org.psort.psortj.svmloc.Native</id>
                     <phase>compile</phase>
                     <goals>
                         <goal>exec</goal>
@@ -32,7 +32,7 @@
                             <argument>${project.basedir}/src/jniinclude/libsvmjni.h</argument>
                             <argument>-classpath</argument>
                             <argument>${project.basedir}/target/classes</argument>
-                            <argument>org.psort.psortj.libsvm.svmjni</argument>
+                            <argument>org.psort.psortj.svmloc.svmjni</argument>
                         </arguments>
                     </configuration>
                 </execution>
@@ -43,7 +43,7 @@
             <configuration>
                 <forkMode>once</forkMode>
                 <environmentVariables>
-                    <LD_LIBRARY_PATH>target/tmplib</LD_LIBRARY_PATH>
+                    <LD_LIBRARY_PATH>src/tmplib</LD_LIBRARY_PATH>
                 </environmentVariables>
             </configuration>
         </plugin>
