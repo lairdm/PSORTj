@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PSORTj.iml" filepath="$PROJECT_DIR$/PSORTj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libhmmer/libhmmer.iml" filepath="$PROJECT_DIR$/libhmmer/libhmmer.iml" />
       <module fileurl="file://$PROJECT_DIR$/libmodhmm/libmodhmm.iml" filepath="$PROJECT_DIR$/libmodhmm/libmodhmm.iml" />
       <module fileurl="file://$PROJECT_DIR$/libsvm/libsvm.iml" filepath="$PROJECT_DIR$/libsvm/libsvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/psortj/psortj.iml" filepath="$PROJECT_DIR$/psortj/psortj.iml" />

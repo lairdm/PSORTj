@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.psort.psortj</groupId>
+        <artifactId>PSORTj</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>psortj-libhmmer</artifactId>
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <executions>
+                <execution>
+                    <id>org.psort.psortj.hmmer.Native</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>exec</goal>
+                    </goals>
+                    <configuration>
+                        <executable>javah</executable>
+                        <arguments>
+                            <argument>-o</argument>
+                            <argument>${project.basedir}/src/jniinclude/libhmmerjni.h</argument>
+                            <argument>-classpath</argument>
+                            <argument>${project.basedir}/target/classes</argument>
+                            <argument>org.psort.psortj.hmmer.hmmerjni</argument>
+                        </arguments>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <forkMode>once</forkMode>
+                <environmentVariables>
+                    <LD_LIBRARY_PATH>src/tmplib</LD_LIBRARY_PATH>
+                </environmentVariables>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>
