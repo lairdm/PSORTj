@@ -22,12 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="libhmmer" />
         <module name="libmodhmm" />
         <module name="libsvm" />
         <module name="psortj" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="libhmmer" target="1.6" />
       <module name="libmodhmm" target="1.6" />
       <module name="libsvm" target="1.6" />
       <module name="psortj" target="1.6" />

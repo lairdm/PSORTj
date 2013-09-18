@@ -65,6 +65,7 @@ public class modhmmjni {
 
     public void helixDestroy() {
         helixdestroy(Helices_obj);
+        Helices_obj = 0;
     }
 
     native public long gethelices(String seq, String hmmfilename, String repfilename, String path);

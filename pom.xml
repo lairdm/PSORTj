@@ -22,6 +22,7 @@
         <module>libsvm</module>
         <module>psortj</module>
         <module>libmodhmm</module>
+        <module>libhmmer</module>
     </modules>
 
     <build>
