@@ -12,6 +12,9 @@ import org.junit.Test;
 public class hmmerjniTest {
     @Test
     public void testHmmSearch() throws Exception {
+        System.loadLibrary("squid");
+        System.loadLibrary("hmmer");
+
 
     }
 
